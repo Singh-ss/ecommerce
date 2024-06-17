@@ -4,9 +4,9 @@ const databaseConnect = () => {
         .then((data) => {
             console.log(`Mongodb connected with server: ${data.connection.host}`);
         })
-        .catch((err) => {
-            console.logr(err);
-        })
+    // .catch((err) => {
+    //     console.logr(err);
+    // })
 }
 
 module.exports = databaseConnect;
