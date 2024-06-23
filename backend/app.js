@@ -4,6 +4,8 @@ const app = express();
 //router imports
 const product = require('./routes/productRouter');
 const user = require('./routes/userRouter');
+const order = require('./routes/orderRouter');
+
 const errorMiddleware = require('./middleware/error');
 const cookieParser = require('cookie-parser');
 
@@ -12,6 +14,7 @@ app.use(cookieParser());
 
 app.use('/api/v1', product);
 app.use('/api/v1', user);
+app.use('/api/v1', order);
 
 //middleware for errors
 app.use(errorMiddleware);
