@@ -4,7 +4,7 @@ const router = express.Router();
 const { isAuthenticatedUser, isAuthorizedUser } = require('../middleware/authUser');
 
 router.route('/products')
-    .get(isAuthenticatedUser, getAllProducts);
+    .get(getAllProducts);
 
 router.route('/admin/product/new')
     .post(isAuthenticatedUser, isAuthorizedUser('admin'), createProduct);
