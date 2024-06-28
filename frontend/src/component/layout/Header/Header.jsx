@@ -31,6 +31,7 @@ const options = {
     profileIconColor: "rgba(35, 35, 35,0.8)",
     profileIconColorHover: "#eb4034",
     ProfileIconElement: FaUser,
+    profileIconUrl: '/login',
 
     searchIcon: true,
     searchIconColor: "rgba(35, 35, 35,0.8)",
