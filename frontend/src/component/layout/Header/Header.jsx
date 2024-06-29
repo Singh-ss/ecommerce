@@ -37,11 +37,13 @@ const options = {
     searchIconColor: "rgba(35, 35, 35,0.8)",
     searchIconColorHover: "#eb4034",
     SearchIconElement: FaSearch,
+    searchIconUrl: '/search',
 
     cartIcon: true,
     cartIconColor: "rgba(35, 35, 35,0.8)",
     cartIconColorHover: "#eb4034",
     CartIconElement: FaShoppingCart,
+    cartIconUrl: '/cart',
 
     cartIconMargin: "1vmax",
 };

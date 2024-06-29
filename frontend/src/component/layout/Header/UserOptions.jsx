@@ -6,6 +6,7 @@ import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ListAltIcon from "@material-ui/icons/ListAlt";
+import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import { useNavigate } from "react-router-dom";
 import { useAlert } from "react-alert";
 import { logout } from "../../../actions/userAction";
@@ -18,10 +19,21 @@ const UserOptions = ({ user }) => {
     const alert = useAlert();
     const dispatch = useDispatch();
 
+    const { cartItems } = useSelector((state) => state.cart);
+
     const options = [
         { icon: <ListAltIcon />, name: "Orders", func: orders },
         { icon: <PersonIcon />, name: "Profile", func: account },
-        { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser },
+        {
+            icon: (
+                <ShoppingCartIcon
+                    style={{ color: cartItems.length > 0 ? "tomato" : "unset" }}
+                />
+            ),
+            name: `Cart(${cartItems.length})`,
+            func: cart,
+        },
+        { icon: <ExitToAppIcon />, name: "Logout", func: logoutUser }
     ];
 
     if (user.role === "admin") {
@@ -45,6 +57,9 @@ const UserOptions = ({ user }) => {
     function logoutUser() {
         dispatch(logout());
         alert.success("Logout Successfully");
+    }
+    function cart() {
+        navigate("/cart");
     }
 
     return (
