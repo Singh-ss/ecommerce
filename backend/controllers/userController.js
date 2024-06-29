@@ -145,14 +145,31 @@ module.exports.updatePassword = catchAsyncErrors(async (req, res, next) => {
 
 //update profile
 module.exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
-    const userDetails = {
+    const newUserData = {
         name: req.body.name,
         email: req.body.email
     };
 
-    //we will add cloudinary later
+    if (req.body.avatar !== "") {
+        const user = await User.findById(req.user.id);
 
-    const user = await User.findByIdAndUpdate(req.user._id, userDetails, {
+        const imageId = user.avatar.public_id;
+
+        await cloudinary.v2.uploader.destroy(imageId);
+
+        const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
+            folder: "Ecommerce/avatars",
+            width: 150,
+            crop: "scale",
+        });
+
+        newUserData.avatar = {
+            public_id: myCloud.public_id,
+            url: myCloud.secure_url,
+        };
+    }
+
+    const user = await User.findByIdAndUpdate(req.user._id, newUserData, {
         new: true,
         runValidators: true,
         useFindAndModify: false
