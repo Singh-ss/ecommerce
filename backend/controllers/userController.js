@@ -68,7 +68,8 @@ module.exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     }
     const resetToken = user.getResetPasswordToken();
     await user.save({ validateBeforeSave: false });
-    const resetLink = `${req.protocol}://${req.get('host')}/api/v1/password/reset/${resetToken}`;
+    // const resetLink = `${req.protocol}://${req.get('host')}/api/v1/password/reset/${resetToken}`;
+    const resetLink = `${process.env.FRONTEND_URL}/password/reset/${resetToken}`;
     const message = `Your reset password link is: ${resetLink} \n\nIf you have not requested this message, please ignore it.`;
     try {
         await sendEmail({
