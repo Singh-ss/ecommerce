@@ -48,9 +48,9 @@
     padding: 1vmax 0;
 }
 
-.detailsBlock-2>span {
-    color: rgba(54, 54, 54, 0.582);
-    font: 200 0.6vmax cursive;
+.detailsBlock-2-span {
+    font: 200 0.8vmax cursive;
+    color: rgba(0, 0, 0, 0.699);
 }
 
 .detailsBlock-3 {
@@ -193,11 +193,6 @@
 .reviewCard>p {
     color: rgba(0, 0, 0, 0.836);
     font: 600 0.9vmax "Roboto";
-}
-
-.reviewCard>span {
-    color: rgba(0, 0, 0, 0.445);
-    font: 300 0.8vmax cursive;
 }
 
 .reviewCardComment {

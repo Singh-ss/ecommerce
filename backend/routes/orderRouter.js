@@ -6,6 +6,9 @@ const router = express.Router();
 router.route('/order/new')
     .post(isAuthenticatedUser, newOrder);
 
+router.route('/order/:id')
+    .get(isAuthenticatedUser, getSingleOrder);
+
 router.route('/orders/me')
     .get(isAuthenticatedUser, myOrders);
 
@@ -14,7 +17,7 @@ router.route('/admin/orders')
 
 router.route('/admin/order/:id')
     .put(isAuthenticatedUser, isAuthorizedUser('admin'), updateOrder)
-    .delete(isAuthenticatedUser, isAuthorizedUser('admin'), deleteOrder)
-    .get(isAuthenticatedUser, isAuthorizedUser('admin'), getSingleOrder);
+    .delete(isAuthenticatedUser, isAuthorizedUser('admin'), deleteOrder);
+
 
 module.exports = router;
