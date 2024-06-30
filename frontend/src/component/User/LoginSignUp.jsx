@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, Fragment } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import './LoginSignUp.css';
 import Loader from "../layout/Loader/Loader";
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
@@ -10,6 +10,7 @@ import { login, clearErrors, register } from '../../actions/userAction';
 import { useAlert } from "react-alert";
 
 export default function LoginSignUp() {
+    const location = useLocation();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const { loading, error, isAuthenticated } = useSelector(state => state.user);
@@ -66,15 +67,17 @@ export default function LoginSignUp() {
         }
     }
 
+    const redirect = location.search ? (location.search.split("=")[1]) : "account";
+
     useEffect(() => {
         if (error) {
             alert.error(error);
             dispatch(clearErrors());
         }
         if (isAuthenticated) {
-            navigate('/account');
+            navigate(`/${redirect}`);
         }
-    }, [dispatch, error, alert, isAuthenticated, navigate]);
+    }, [dispatch, error, alert, isAuthenticated, navigate, redirect]);
 
     const switchTabs = (e, tab) => {
         if (tab === 'login') {
