@@ -40,6 +40,7 @@ import UpdateUser from './component/Admin/UpdateUser.jsx';
 import ProductReviews from './component/Admin/ProductReviews.jsx';
 import Contact from './component/layout/Contact/Contact.jsx';
 import About from './component/layout/About/About.jsx';
+import NotFound from './component/layout/Not Found/NotFound.jsx'
 
 function App() {
   const { isAuthenticated, user } = useSelector((state) => state.user);
@@ -49,6 +50,7 @@ function App() {
 
     setStripeApiKey(data.stripeApiKey);
   }
+
   useEffect(() => {
     WebFont.load({
       google: {
@@ -59,6 +61,7 @@ function App() {
 
     getStripeApiKey();
   }, []);
+
   return (
     <Router>
       <Header />
@@ -111,6 +114,7 @@ function App() {
 
         <Route exact path="/contact" Component={Contact} />
         <Route exact path="/about" Component={About} />
+        <Route path='*' Component={NotFound} />
       </Routes>
       <Footer />
     </Router>
