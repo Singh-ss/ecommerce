@@ -1,6 +1,6 @@
 import React from 'react'
 import profilePng from "../../images/Profile.png";
-import Rating from '@mui/material/Rating';
+import { Rating } from "@material-ui/lab";
 
 const ReviewCard = ({ review }) => {
     //options for rating

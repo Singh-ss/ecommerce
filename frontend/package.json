@@ -4,23 +4,28 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.4",
+    "@material-ui/data-grid": "^4.0.0-alpha.37",
     "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
     "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "^5.15.20",
     "@mui/material": "^5.15.20",
     "@mui/styles": "^5.15.20",
     "@mui/x-data-grid": "^7.8.0",
+    "@mui/x-tree-view": "^7.8.0",
     "@stripe/react-stripe-js": "^2.7.2",
     "@stripe/stripe-js": "^4.0.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.7.2",
+    "chart.js": "^3.5.1",
     "country-state-city": "^3.2.1",
     "overlay-navbar": "^1.2.3",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
+    "react-chartjs-2": "^3.0.4",
     "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.2.0",
@@ -59,5 +64,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://192.168.185.72:4000"
+  "proxy": "http://192.168.0.104:4000"
 }

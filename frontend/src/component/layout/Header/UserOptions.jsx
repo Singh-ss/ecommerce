@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 import "./Header.css";
-import { SpeedDial, SpeedDialAction } from "@mui/material";
+import { SpeedDial, SpeedDialAction } from "@material-ui/lab";
 import { Backdrop } from "@mui/material";
 import DashboardIcon from "@material-ui/icons/Dashboard";
 import PersonIcon from "@material-ui/icons/Person";
@@ -45,7 +45,7 @@ const UserOptions = ({ user }) => {
     }
 
     function dashboard() {
-        navigate("/dashboard");
+        navigate("/admin/dashboard");
     }
 
     function orders() {

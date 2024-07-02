@@ -217,9 +217,6 @@ module.exports.updateUserRole = catchAsyncErrors(async (req, res, next) => {
         useFindAndModify: false,
         runValidators: true
     });
-    if (!user) {
-        return next(new errorHandler('User does not exist for the given id.', 404));
-    }
 
     res.status(200).json({
         success: true,
@@ -234,7 +231,10 @@ module.exports.deleteUser = catchAsyncErrors(async (req, res, next) => {
         return next(new errorHandler('User does not exist for the given id.', 404));
     }
 
-    //we will remove cloudinary later
+    //cloudinary image remove
+    const imageId = user.avatar.public_id;
+
+    await cloudinary.v2.uploader.destroy(imageId);
 
     await user.deleteOne();
     res.status(200).json({
