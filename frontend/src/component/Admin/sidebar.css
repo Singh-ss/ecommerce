@@ -10,10 +10,7 @@
 }
 
 .sidebar>a>img {
-    padding-top: 50px;
-    padding-left: 20px;
-    width: 80%;
-    height: 50%;
+    width: 100%;
     transition: all 0.5s;
 }
 
@@ -21,12 +18,7 @@
     filter: drop-shadow(0 0 10px tomato);
 }
 
-.sidebarProduct {
-    padding: 2rem !important;
-}
-
-.sidebar a,
-.sidebarProduct {
+.sidebar a {
     text-decoration: none;
     color: rgba(0, 0, 0, 0.493);
     font: 200 1rem "Roboto";
@@ -34,20 +26,17 @@
     transition: all 0.5s;
 }
 
-.sidebar a:hover,
-.sidebarProduct:hover {
+.sidebar a:hover {
     color: tomato;
     transform: scale(1.1);
 }
 
-.sidebar a>p,
-.sidebarProduct>p {
+.sidebar a>P {
     display: flex;
     align-items: center;
 }
 
-.sidebar a>p>svg,
-.sidebarProduct>p>svg {
+.sidebar a>p>svg {
     margin-right: 0.5rem;
 }
 
