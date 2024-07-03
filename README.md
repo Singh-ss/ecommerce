@@ -1,4 +1,5 @@
 
+
 # Ecommerce
 
   
@@ -24,7 +25,7 @@ https://ecommerce-5i7e.onrender.com/
 ## Sneak Peak
 
 
-![https://i.postimg.cc/4yf9MLcJ/Screenshot-2024-07-03-155214.png](https://i.postimg.cc/4yf9MLcJ/Screenshot-2024-07-03-155214.png) ![https://i.postimg.cc/Y2Rgg7cj/Screenshot-2024-07-03-204722.png](https://i.postimg.cc/Y2Rgg7cj/Screenshot-2024-07-03-204722.png)
+[![Screenshot-2024-07-03-213656.png](https://i.postimg.cc/bvM7vWgv/Screenshot-2024-07-03-213656.png)](https://postimg.cc/SX6TTZw0) ![https://i.postimg.cc/Y2Rgg7cj/Screenshot-2024-07-03-204722.png](https://i.postimg.cc/Y2Rgg7cj/Screenshot-2024-07-03-204722.png)
 ![https://i.postimg.cc/MH9Q8701/Screenshot-2024-07-03-204738.png](https://i.postimg.cc/MH9Q8701/Screenshot-2024-07-03-204738.png) ![https://i.postimg.cc/g2C6dkht/Screenshot-2024-07-03-204810.png](https://i.postimg.cc/g2C6dkht/Screenshot-2024-07-03-204810.png)
 ![https://i.postimg.cc/CxBfWfRf/Screenshot-2024-07-03-204824.png](https://i.postimg.cc/CxBfWfRf/Screenshot-2024-07-03-204824.png) ![https://i.postimg.cc/PrFw3M5j/Screenshot-2024-07-03-204930.png](https://i.postimg.cc/PrFw3M5j/Screenshot-2024-07-03-204930.png)
 ![https://i.postimg.cc/X7v5kP3L/Screenshot-2024-07-03-204943.png](https://i.postimg.cc/X7v5kP3L/Screenshot-2024-07-03-204943.png) ![https://i.postimg.cc/VNX0NQBf/Screenshot-2024-07-03-205003.png](https://i.postimg.cc/VNX0NQBf/Screenshot-2024-07-03-205003.png)
