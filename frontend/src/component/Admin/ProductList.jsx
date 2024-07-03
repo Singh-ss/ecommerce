@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useState } from "react";
-import { DataGrid } from "@mui/x-data-grid";
+import React, { Fragment, useEffect } from "react";
+import { DataGrid } from "@material-ui/data-grid";
 import "./productList.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -20,8 +20,6 @@ import { useNavigate } from "react-router-dom";
 const ProductList = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
-    const [pageSize, setPageSize] = useState(10);
 
     const alert = useAlert();
 
@@ -127,12 +125,11 @@ const ProductList = () => {
                     <DataGrid
                         rows={rows}
                         columns={columns}
-                        // pageSize={10}
+                        pageSize={10}
                         disableSelectionOnClick
                         className="productListTable"
-                        pageSize={pageSize}
-                        onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
-                    // autoHeight
+                        rowsPerPageOptions={[10, 20, 50]}
+                        autoHeight
                     />
                 </div>
             </div>

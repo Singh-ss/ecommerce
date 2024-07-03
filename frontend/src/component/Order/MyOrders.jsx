@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { DataGrid } from '@mui/x-data-grid';
+import { DataGrid } from '@material-ui/data-grid';
 import "./myOrders.css";
 import { useSelector, useDispatch } from "react-redux";
 import { clearErrors, myOrders } from "../../actions/orderAction";
@@ -95,6 +95,7 @@ const MyOrders = () => {
                         rows={rows}
                         columns={columns}
                         pageSize={10}
+                        rowsPerPageOptions={[10, 20, 50]}
                         disableSelectionOnClick
                         className="myOrdersTable"
                         autoHeight
