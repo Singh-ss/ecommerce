@@ -31,7 +31,7 @@ import {
     CLEAR_ERRORS,
 } from '../constants/productConstants';
 
-export const getProduct = (keyword = '', currentPage = 1, price = [0, 25000], category, ratings = 0) => async (dispatch) => {
+export const getProduct = (keyword = '', currentPage = 1, price = [0, 200000], category, ratings = 0) => async (dispatch) => {
     try {
         dispatch({ type: ALL_PRODUCT_REQUEST });
 
@@ -74,13 +74,13 @@ export const getAdminProduct = () => async (dispatch) => {
     }
 };
 
-//   // Create Product
+// Create Product
 export const createProduct = (productData) => async (dispatch) => {
     try {
         dispatch({ type: NEW_PRODUCT_REQUEST });
 
         const config = {
-            headers: { "Content-Type": "application/json" },
+            headers: { "Content-Type": "multipart/form-data" },
         };
 
         const { data } = await axios.post(

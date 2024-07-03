@@ -20,7 +20,8 @@ const ConfirmOrder = () => {
 
     const tax = subtotal * 0.18;
 
-    const totalPrice = subtotal + tax + shippingCharges;
+    let totalPrice = subtotal + tax + shippingCharges;
+    totalPrice = Math.round(totalPrice * 100) / 100;
 
     const address = `${shippingInfo.address}, ${shippingInfo.city}, ${shippingInfo.state}, ${shippingInfo.pinCode}, ${shippingInfo.country}`;
 
